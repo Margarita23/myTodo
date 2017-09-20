@@ -1,0 +1,44 @@
+<% current_user.projects.each do |project| %>
+  <div class="project">
+    <div class="project-head">
+      <div class="project-calendar"><%= link_to image_tag("http://res.cloudinary.com/nmetau/image/upload/v1504796437/favicon_10_gy7dvg.ico"), "#" %></div>
+      <div class="project-name">
+        <%= project.name %>
+      </div>
+      <div class="project-edit-name">
+      <%= form_for project, url: project_path(project.id), method: :put do |f| %>
+          <%= f.text_field :name, placeholder: project.name %>
+        <div class="get-edit-input-submit">
+          <%= f.submit "" %>
+        </div>
+      <% end %>
+      </div>
+      <div class="get-edit-input"></div>
+      <div class="project-delete-name">
+        <%= link_to image_tag("http://res.cloudinary.com/nmetau/image/upload/v1504801309/favicon_18_gslmgk.ico"), project_path(project.id), method: :delete %>
+      </div>
+    </div>
+    <div class="project-add-task">
+      <div class="add-image"></div>
+      <div class="task-construction">
+        <%= form_for @task, url: project_tasks_path(project.id), method: :post do |f| %>
+          <%= f.text_field :target, placeholder: "Start typing here to create a task..." %>
+          <%= f.submit "Add Task" %>
+        <% end %>
+      </div>
+    </div>
+    <div class="project-content project-<%= project.id %>-id">
+      <% project.tasks.order(:priority).each do |task| %>
+        <%= render partial: "tasks", locals: { task: task } %>
+      <% end %>
+    </div>
+  </div>
+<% end %>
+
+<div class="add-project-button">
+  <%= link_to "Add new project", project_index_path, method: :post %>
+</div>
+
+<div class="exit">
+  <%= link_to "Exit", destroy_user_session_path, :method => :delete %>
+</div>

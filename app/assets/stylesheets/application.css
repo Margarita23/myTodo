@@ -1,0 +1,540 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body {
+  background-image: url(http://res.cloudinary.com/nmetau/image/upload/v1442645715/fon_x5wpto.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+p.alert {
+  background:  linear-gradient(rgb(245, 199, 199), rgb(211, 137, 137));
+  border-radius: 5px;
+  color: rgb(113, 7, 7);
+  padding-left: 10px;
+  width: 450px;
+  margin: 10px auto;
+}
+
+p.notice {
+  background: linear-gradient(rgb(191, 242, 203), rgb(125, 203, 143));
+  border-radius: 5px;
+  color: rgb(0, 69, 16);
+  padding-left: 10px;
+  width: 450px;
+  margin: 10px auto;
+}
+
+wrapper {
+  padding: 20px; 
+  text-align: center;
+  font-family: fantasy;
+  text-transform: uppercase;
+}
+
+wrapper * {
+  margin: 0px;
+}
+
+wrapper p:first-child {
+  font-size: 35px;
+  font-weight: 600;
+  text-shadow: 0px 0.5px 0px rgba(255,255,255, 0.8);
+}
+
+wrapper p:nth-child(2) {
+  font-size: 24px;
+  font-weight: 500;
+  text-shadow: 0px 0.5px 0px rgba(255,255,255, 0.8);
+}
+
+.content {
+  display: block;
+  text-align: center;
+}
+
+.authentication {
+  border-radius: 3px;
+  display: inline-block;
+  margin: 0 auto;
+  padding: 20px;
+  background-image: url("http://res.cloudinary.com/nmetau/image/upload/v1504036588/favicon_sytaai.ico");
+  background-size: cover;
+  height: 220px;
+  width: 220px;
+}
+
+.authentication h2{
+  color: rgb(248, 249, 255);
+  text-shadow: 2px 2px rgb(104, 124, 147);
+}
+
+.authentication .field input {
+  background: none;
+  border: none;
+  border-bottom: 1px solid rgb(21, 46, 82);
+  margin: 10px auto;
+  text-align: center;
+  color: rgb(248, 249, 255);
+  width: 215px;
+}
+
+.authentication .field input:placeholder {
+  color: rgb(28, 58, 101);
+}
+
+.authentication label {
+  font-size: 15px;
+}
+
+.authentication .field_remember_me {
+  display: block;
+  text-align: right;
+  color: rgb(28, 58, 101);
+}
+
+.authentication .field_remember_me * {
+  padding: 0px;
+  margin: 0px;
+}
+
+.authentication .actions {
+  display: block;
+  text-align: right;
+}
+
+.authentication .actions input {
+  border-radius: 4px 4px 4px 4px;
+  border: 1px solid rgb(49, 85, 137);
+  width: 70px;
+  height: 30px;
+  background: linear-gradient(rgb(248, 249, 255), rgb(131, 154, 191));
+  box-shadow: inset 0 1px 0 rgb(140, 172, 211);
+  cursor: pointer;
+  color: rgb(28, 58, 101);
+}
+
+.authentication .actions input:hover {
+  background: linear-gradient(rgb(255, 255, 255), rgb(181, 197, 222));
+  box-shadow: inset 0 1px 0 rgb(127, 148, 175);
+  color: rgb(31, 67, 118);
+}
+
+.tabs {
+  margin: 0px auto;
+  padding: 0px;
+}
+
+.first_tab {
+  display: inline-block;
+  background-image: url("http://res.cloudinary.com/nmetau/image/upload/v1504101853/favicon_9_p7cjfb.ico");
+  margin: 0px;
+  padding: 0px;
+  height: 64px;
+  width: 64px;
+  font-size: 12px;
+  position: relative;
+  top: -18px;
+  left: -40px;
+}
+
+.first_tab * {
+  text-decoration-line: none;
+  color: rgb(145, 135, 56);
+  cursor: pointer;
+}
+
+.second_tab {
+  font-size: 10px;
+  display: inline-block;
+  background-image: url("http://res.cloudinary.com/nmetau/image/upload/v1504100935/favicon_8_jhlfvr.ico");
+  margin: 0px;
+  padding: 0px;
+  height: 64px;
+  width: 64px;
+  position: relative;
+  top: -10px;
+  left: -50px;
+}
+
+.second_ft_sign_tab {
+  font-size: 13px;
+  display: inline-block;
+  background-image: url("http://res.cloudinary.com/nmetau/image/upload/v1504100935/favicon_8_jhlfvr.ico");
+  margin: 0px;
+  padding: 0px;
+  height: 64px;
+  width: 64px;
+  position: relative;
+  top: -10px;
+  left: -42px;
+}
+
+.second_ft_sign_tab * {
+  text-decoration-line: none;
+  text-decoration-color: rgb(12, 44, 67);
+  cursor: pointer;
+}
+
+.second_tab * {
+  text-decoration-line: none;
+  text-decoration-color: rgb(12, 44, 67);
+  cursor: pointer;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid rgba(162, 12, 12, 0.5);
+  padding: 7px;
+  padding-bottom: 0;
+  margin: 20px auto;
+  background-color: rgba(240, 240, 240, 0.6);
+  display: inline-block;
+  position: absolute;
+  bottom: 100px;
+  width: 240px;
+  margin: 0px -130px;
+}
+
+#error_explanation h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: rgba(204, 0, 0, 0.7);
+    color: rgb(255, 255, 255);
+  }
+#error_explanation ul li {
+    font-size: 12px;
+    list-style: square;
+    color: rgb(100, 20, 20);
+}
+
+.project {
+  width:450px;
+  border-top: 1px solid rgb(75, 102, 126);
+  margin: 25px auto;
+  padding: 0px;
+  border-radius: 0px 0px 13px 13px;
+  display: grid;
+}
+
+.project-head {
+  background: linear-gradient(rgb(80, 126, 188), rgb(57, 93, 153));
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  border-top: 1px solid rgb(102, 147, 196);
+  border-left: 1px solid rgb(77, 98, 126);
+  border-right: 1px solid rgb(62, 89, 124);
+  border-bottom: 1px solid rgb(55, 86, 130);
+  margin: 0px;
+  height: 38px;
+}
+
+.project-head > *{
+  margin: 5px;
+}
+
+.project-calendar {
+  display: inline-block;
+  position: relative;
+  float: left;
+}
+
+.project-name {
+  display: inline-block;
+  position: relative;
+  float: left;
+  color: rgb(233, 255, 255);
+  text-shadow: 1px 1px 1px rgb(102, 147, 196);
+  margin: 12px 0px 0px 2px;
+  width: 340px;
+  text-align: left;
+}
+
+.get-edit-input {
+  display: inline-block;
+  background-image: url("http://res.cloudinary.com/nmetau/image/upload/v1504800865/favicon_16_rams0d.ico");
+  height: 24px;
+  width: 24px;
+}
+
+.project-edit-name {
+  display: none;
+  float: left;
+  color: rgb(233, 255, 255);
+  text-shadow: 1px 1px 1px rgb(102, 147, 196);
+  width: 369px;
+  text-align: left;
+}
+
+input#project_name {
+  width: 340px;
+  height: 24px;
+  box-sizing: border-box;
+  border: none;
+  background: none;
+  border-bottom: 1px solid rgb(102, 147, 196);
+  color: rgb(233, 255, 255);
+  text-shadow: 1px 1px 1px rgb(102, 147, 196);
+}
+
+.project-edit-name input[type="submit"]{
+  background: url("http://res.cloudinary.com/nmetau/image/upload/v1504800865/favicon_16_rams0d.ico");
+  border: none;
+  position: relative;
+  height: 24px;
+  width: 24px;
+}
+
+.get-edit-input-submit {
+  display: inline-block;
+  float: right;
+  position: relative;
+}
+
+.project-delete-name {
+  display: inline-block;
+  position: relative;
+  float: right;
+  border-left: 1px solid rgb(141, 174, 231);
+  padding: 0px 0px 0px 5px;
+  margin: 5px 5px 5px 0px;
+}
+
+.project-add-task {
+  background: linear-gradient(rgb(221, 224, 235), rgb(204, 204, 204));
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: 38px;
+  border-top: 1px solid rgb(219, 224, 237);
+  border-right: 1px solid rgb(184, 184, 179);
+  border-bottom: 1px solid rgb(198, 198, 196);
+  border-left: 1px solid rgb(184, 184, 179);
+}
+
+.add-image {
+  background-image: url("http://res.cloudinary.com/nmetau/image/upload/v1504817597/favicon_19_samavq.ico");
+  height: 24px;
+  width: 24px;
+  margin: 5px;
+  display: inline-block;
+  float: left;
+}
+
+.task-construction {
+  height: 24px;
+  width: 405px;
+  float: left;
+  margin: 5px 0px 5px 5px;
+}
+
+.task-construction form {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+
+.task-construction input[type="text"] {
+  display: inline-block;
+  border-top: 1px solid rgb(142, 142, 142);
+  border-bottom: 1px solid rgb(219, 219, 219);
+  border-left: 1px solid rgb(215, 215, 215);
+  border-right: none;
+  border-radius: 2px 0px 0px 2px;
+  position: relative;
+  padding: 3px 5px 3px 5px;
+  width: 313px;
+  float: left;
+}
+
+.task-construction input[type="submit"] {
+  display: inline-block;
+  border-bottom: 1px solid rgb(77, 121, 97);
+  border-top: 1px solid rgb(133, 162, 145);
+  border-left: 1px solid rgb(140, 163, 149);
+  border-right: 1px solid rgb(82, 115, 96);
+  border-radius: 0px 4px 4px 0px;
+  position: relative;
+  padding: 3px 5px 3px 5px;
+  width: 80px;
+  float: left;
+  color: rgb(255, 255, 255);
+  background: linear-gradient(rgb(149, 192, 173), rgb(83, 135, 105))
+}
+
+.project-content {
+  position: relative;
+  background: rgb(255, 255, 255);
+  width: 100%;
+  border-radius: 0px 0px 10px 10px;
+  border-right: 1px solid rgb(190, 189, 184);
+  border-left: 1px solid rgb(190, 189, 184);
+  color: rgb(149, 149, 149);
+  border-radius: 0px 0px 13px 13px;
+}
+
+.one-task {
+  border-bottom: 1px solid rgb(239, 239, 239);
+  position: relative;
+  width: 100%;
+  padding-top: 0px;
+  margin-top: 0px;
+  display: flex;
+  min-height: 30px;
+}
+
+.one-task:first-child {
+  border-top: 1px solid rgb(185, 185, 185);
+}
+
+.one-task:last-child {
+  border-radius: 0px 0px 10px 10px;
+  border-bottom: 1px solid rgb(142, 132, 88);
+}
+
+.task-state {
+  display: inline-block;
+  position: relative;
+  float: left;
+  width: 34px;
+  border-right: 6px double rgb(236, 228, 231);
+  padding: 4px 0px 0px 0px;
+}
+
+.task-target {
+  display: inline-block;
+  position: relative;
+  float: left;
+  width: 314px;
+  text-align: left;
+  padding: 6px 4px 0px 4px;
+  overflow-wrap: break-word;
+  border-right: 1px solid rgb(236, 237, 240);
+}
+
+.settings_task > *{
+  display: inline-block;
+  position: relative;
+  padding: 3px 2px;
+}
+
+.settings_task {
+  display: inline-block;
+  height: auto;
+  float: right;
+  position: relative;
+  right: 0px;
+  padding: 5px 0px 0px 0px;
+  margin: 0px;
+  width: 86px;
+}
+
+.task-drag-drop {
+  background-image: url("http://res.cloudinary.com/nmetau/image/upload/v1504876096/favicon_20_vsjiur.ico");
+  width: 16px;
+  height: 16px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.add-project-button {
+  margin: 30px;
+}
+
+.add-project-button > * {
+  border-bottom: 1px solid rgb(33, 59, 96);
+  border-top: 1px solid rgb(94, 155, 221);
+  border-left: 1px solid rgb(68, 102, 147);
+  border-right: 1px solid rgb(68, 102, 147);
+  border-radius: 15px;
+  padding: 10px;
+  width: 100px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  background: linear-gradient(rgb(80, 126, 188), rgb(57, 93, 153));
+}
+
+.exit > *{
+  border-bottom: 1px solid rgb(67, 67, 67);
+  border-top: 1px solid rgb(190, 191, 193);
+  border-left: 1px solid rgb(138, 140, 142);
+  border-right: 1px solid rgb(138, 140, 142);
+  border-radius: 15px;
+  padding: 10px;
+  width: 100px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  background: linear-gradient(rgb(171, 174, 178), rgb(72, 73, 74));
+}
+
+.task-input-target {
+  display: none;
+  float: left;
+  color: rgb(248, 255, 233);
+  text-shadow: 1px 1px 1px rgb(196, 192, 102);
+  width: 320px;
+  height: 30px;
+  text-align: left;
+}
+
+.task-delete {
+  display: inline-block;
+}
+
+.task-edit-target {
+  display: none;
+}
+
+.get-task-edit {
+  display: inline-block;
+}
+
+.get-tasks-input-submit {
+  display: none;
+  position: relative;
+  padding: 3px 2px;
+  margin: 0px;
+  width: 16px;
+  height: 16px;
+  bottom: 2px;
+}
+
+.task-input-target input#task_target {
+  width: 320px;
+  position: relative;
+  height: 26px;
+  box-sizing: border-box;
+  border: none;
+  background: none;
+  border-bottom: 1px solid rgb(188, 161, 41);
+  color: rgb(188, 161, 41);
+  text-shadow: 1px 1px 1px rgb(77, 68, 8);
+}
+
+.get-tasks-input-submit input[type="submit"]{
+  background: url("http://res.cloudinary.com/nmetau/image/upload/v1504876352/favicon_21_qyaaen.ico");
+  border: none;
+  position: relative;
+  height: 16px;
+  width: 16px;
+}

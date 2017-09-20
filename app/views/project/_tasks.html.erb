@@ -1,0 +1,21 @@
+<div class="one-task data-id-<%= task.id %>">
+  <div class="task-state">
+    <%= check_box_tag :state, task.state %>
+  </div>
+  <div class="task-target">
+    <%= task.target %>
+  </div>
+  <%= form_for task, url: project_task_path(task.project.id, task.id), method: :put do |f| %>
+    <div class="task-input-target">
+      <%= f.text_field :target, placeholder: task.target %>
+    </div>
+    <div class="settings_task">
+      <div class="task-drag-drop"></div>
+      <div class="get-task-edit"><%= image_tag("http://res.cloudinary.com/nmetau/image/upload/v1504876352/favicon_21_qyaaen.ico") %></div>
+       <div class="get-tasks-input-submit">
+          <%= f.submit "" %>
+        </div>
+      <div class="task-delete"><%= link_to image_tag("http://res.cloudinary.com/nmetau/image/upload/v1504876495/favicon_22_elcsbm.ico"),  project_task_path(task.project.id, task.id), method: :delete %></div>
+    </div>
+  <% end %>
+</div>
